@@ -1,0 +1,575 @@
+@CHARSET "UTF-8";
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+   ••  Perfection or Vanity.com                                     ••
+   ••  Updated: March 2010                                          ••
+   ••                                                               ••
+   ••  Copyright 2010 Piotr Petrus                                  ••
+   ••  Feel free to learn and adapt techniques used here,           ••
+   ••  but don’t just copy and call it yours.                       ••
+   •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••   
+   
+---------------------------------------------------------------------- */
+
+/* 0. RESET
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+abbr, address, article, aside, audio, b, blockquote, body, canvas, 
+caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset,
+figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup,
+html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, 
+object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, 
+sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background-color: transparent;
+}
+
+article, aside, canvas, details, figcaption, figure, footer, header, 
+hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+address, cite, q, dfn {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+a, ins, del {
+  text-decoration: none
+}
+
+q {
+	quotes: none;
+}
+
+q:after, q:before {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th, td {
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+}
+
+pre, code, var, samp, kbd {
+  font-family: monospace, sans-serif;
+}
+
+/* 1. GLOBAL
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+body {
+  background: #3e5b69 url("denim.jpg") repeat 0 4px;
+  color: #fff;
+  font: normal 14px/22px "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", sans-serif;
+  padding: 22px 0;
+}
+
+a {
+  color: #be1213;
+}
+
+#a11y {
+  display: none;
+  speak: normal;
+}
+
+/* 2. HEADER
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+body > header {
+  background: url("header.png") no-repeat 0 22px;
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 20;
+}
+
+body > header:after,
+body > header nav ul:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+body > header p {
+  display: block;
+  clear: both;
+  padding: 8px 10px 4px 10px;
+  margin-bottom: 29px;
+  float: left;
+}
+
+body > header p img {
+  display: block;
+}
+
+body > header nav,
+body > header form {
+  position: absolute;
+  top: 110px;
+}
+
+body > header nav {
+  background: #ddd7ba;
+  width: 720px;
+}
+
+body > header nav ul {
+  padding: 0 18px;
+}
+
+body > header nav li {
+  float: left;
+  list-style: none;
+  font: normal small-caps 18px/44px "Helvetica Neue", "Arial", sans-serif;
+  text-transform: lowercase;
+  letter-spacing: 0.72em;
+}
+
+body > header nav li.aside {
+  float: right;
+}
+
+body > header nav li a {
+  display: block;
+  padding: 0 0.36em 0 18px;
+  color: #575342;
+  text-shadow: rgba(255, 255, 255, 0.6) 0 1px 1px;
+}
+
+body > header nav li.selected {
+  position: relative;
+}
+
+body > header nav li.selected > span {
+  width: 19px;
+  height: 6px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin: 0 0 -6px -10px;
+  background: url("nav.png") no-repeat;
+}
+
+body > header nav li.selected a {
+  background-color: #978e71;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 1px;
+}
+
+body > header nav li a span {
+  /* Gecko displays lowercase small-caps like smaller uppercase. */
+  -moz-transform: scale(0.85);
+}
+
+body > header form {
+  width: 240px;
+  left: 720px;
+  background: #dcd8bb url("search.png") repeat-y;
+}
+
+body > header form legend {
+  display: none;
+}
+
+body > header form label {
+  display: block;
+  height: 44px;
+  text-indent: -1000em;
+}
+
+body > header form input {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  width: 218px;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* 3. MAIN
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+.site {
+  width: 648px;
+  margin: 0 auto;
+  padding: 44px 276px 22px 36px;
+  background: #fff url("site.png") repeat-y 100% 0;
+  color: #323232;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0 16px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 0 16px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0 16px;
+  position: relative;
+  z-index: 10;
+}
+
+/* 3.1 =Pager
+====================================================================== */
+
+.pager:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.pager {
+	background: url("pager.png") 50% 49px no-repeat;
+	font-family: "Constantia", "Georgia", "Palatino Linotype", serif;
+	font-style: italic;
+	margin: 0 -36px 0;
+	padding: 44px 0 22px;
+	border-top: 10px solid #f6f4ec;
+}
+
+.pager li {
+	width: 270px;
+	float: right;
+	padding: 22px 0;
+	list-style: none;
+}
+
+.pager li.prev {
+	float: left;
+	text-align: right;
+}
+
+.pager a { 
+	color: #645b3c;
+	border-bottom: 1px solid #ddd4b7;
+}
+
+.pager a:hover,
+.pager a:focus { 
+	border-bottom-color: #b8ad88; 
+}
+
+/* 4. ARTICLES
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+article {
+  border-top: 10px solid #f6f4ec;
+  margin: 22px -36px 34px;
+  padding: 22px 36px 0;
+}
+
+article:first-child {
+  border-top: 0;
+}
+
+/* 4.1 =Header
+====================================================================== */
+
+article.text header h1 {
+  font: bold 30px/44px "Helvetica Neue", "Arial", sans-serif;
+  letter-spacing: -0.05em;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px;
+}
+
+article.text header a {
+  color: #363d41;
+  border-bottom: 0;
+}
+
+article header time {
+  display: block;
+  font: italic normal 15px/22px "Constantia", "Georgia", "Palatino Linotype", serif;
+  color: #72787c;
+}
+
+article.link header h1 a {
+  font-weight: bold;
+}
+
+article.link header h1,
+article.link header p {
+  display: inline;
+}
+
+article.link header p {
+  padding-left: 1ex;
+}
+
+article.link header p a {
+  border: 0;
+  color: #707070;
+}
+
+
+/* 4.2 =Body
+====================================================================== */
+
+article a {
+  border-bottom: 1px solid #e6e0ce;
+}
+
+article a:visited {
+  color: #de8889;
+  border-bottom-color: #f2efe6;
+}
+
+article a:hover,
+article a:focus {
+  border-bottom-color: #be1213;
+  border-bottom-style: dotted;
+}
+
+article a:visited:hover,
+article a:visited:focus {
+  border-bottom-color: #de8889;
+}
+
+article em {
+  color: #72787c;
+}
+
+article code,
+article var,
+article samp,
+article kbd {
+  color: #5d5d5d;
+  line-height: 1;
+}
+
+article sup {
+  position: relative;
+  top: -5px;
+  font-size: 0.8em;
+}
+
+article > figure,
+article > blockquote,
+article > p,
+article > ul,
+article > ol,
+article li > p,
+article > pre,
+article > h3,
+article > h2 {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+article > figure,
+article > p.figure {
+  background: url("article-figure.png") no-repeat 100% 100%;
+  margin-right: -10px;
+}
+
+article > figure img,
+article > p.figure img {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #c3b894;
+  padding: 5px;
+}
+
+article > blockquote {
+  background: url("article-blockquote.png") no-repeat;
+  color: #5d5d5d;
+  padding-left: 50px;
+}
+
+article > ul > li {
+  margin-left: 25px;
+  list-style: disc outside;
+}
+
+article > ol > li {
+  margin-left: 25px;
+  list-style: decimal outside;
+}
+
+article > pre,
+article > .demo {
+  margin: 22px -276px 0 -36px;
+  outline-offset: -1px;
+}
+
+article > pre {
+  background-color: #e9f1f5;
+  background-color: rgba(233, 241, 245, 0.5);
+  outline: 1px solid #d5dde0;
+  outline-color: rgba(213, 221, 224, 0.5);
+  padding: 22px 36px;
+}
+
+article > pre code {
+  background-color: transparent;
+  outline: 0;
+}
+
+article > pre .highlight {
+  font-weight: bold;
+}
+
+article > h2,
+article > h3 {
+  font: bold 18px/22px "Helvetica Neue", "Arial", sans-serif;
+  letter-spacing: -0.0.25em;
+  color: #363d41;
+  background: url("article-header.png") no-repeat 0 100%;
+}
+
+article > h3 {
+  font-size: 14px;  
+}
+
+/*  =Footnote
+====================================================================== */
+
+.footnoted {
+  float: left;
+  margin-top: 0;
+}
+
+.footnote {
+  display: block;
+  width: 216px;
+  float: right;
+  margin: 0 -276px 22px 0;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0 12px;
+}
+
+.footnote + * {
+  clear: left;
+}
+
+article > header + .footnoted,
+article > header + .footnoted + .footnote,
+article > pre + .footnoted,
+article > pre + .footnoted + .footnote {
+  margin-top: 22px;
+}
+
+/*  =Demo
+====================================================================== */
+
+article > .demo {
+  background-color: #f5f3e9;
+  background-color: rgba(245, 243, 233, 0.5);
+  outline: 1px solid #e0dfd5;
+  outline-color: rgba(224, 223, 213, 0.5);
+  line-height: 22px;
+}
+
+article > .demo-padded {
+  padding: 22px 36px;
+}
+
+article > .demo-reset-inline {
+  color: black;
+}
+
+article > .demo-reset-inline a {
+  border-bottom: 0;
+  color: blue;
+}
+
+article > .demo-reset-inline a:visited {
+  color: purple;
+}
+
+article > .demo-reset-inline em,
+article > .demo-reset-inline code {
+  color: black;
+  color: inherit;
+}
+
+article > .demo-reset-inline code {
+  font-family: monospace;
+}
+
+article > .demo-overlapped {
+  position: absolute;
+  right: 0;
+  margin: 44px 276px 0 0;
+  -moz-transform: translate(0, -22px);
+  background-color: transparent;
+  outline: 0;
+}
+
+article > .demo-overlapped.demo-padded {
+  background-color: #fff;
+  outline: 1px solid #d5dde0;
+  outline-color: rgba(213, 221, 224, 0.5);
+}
+
+/* 5. ASIDE
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+aside {
+  position: absolute;
+  top: 44px;
+  width: 240px;
+  left: 720px;
+  padding: 44px 0;
+  font-size: 12px;
+}
+
+aside li {
+  list-style: none;
+}
+
+aside ul {
+  border-bottom: 1px solid #e6e0ce;
+}
+
+aside li a {
+  display: block;
+  padding: 0 12px;
+  font-weight: bold;
+  border-top: 1px solid #e6e0ce;
+  line-height: 21px;
+}
+
+aside li a:hover,
+aside li a:focus {
+  background-color: #ede9db;
+}
+
+/* 6. FOOTER
+•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+body > footer {
+  width: 960px;
+  margin: 0 auto;
+  padding: 44px 0 22px;
+  text-align: center;
+  font-size: 11px;
+}
+
+body > footer a {
+  color: #fff;
+}
+
+body > footer p + p,
+body > footer p + p a {
+  color: #95adb3;
+}

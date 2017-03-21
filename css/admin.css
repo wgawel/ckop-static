@@ -1,0 +1,11 @@
+body {
+	background: none;
+}
+
+#mainContent {
+	width: inherit;
+}
+
+article.text {
+	width: inherit;
+}

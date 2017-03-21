@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+/* Menu - border-corners */
+
+body > header nav li img {
+  	margin-top: -6px;
+  	padding-left: 5%;
+	display: block;
+	visibility: hidden;
+	width: 90%; 
+	height: 100%;
+}
+
+body > header nav li > a {
+	margin: -40px auto 0 auto;
+	text-align: center;
+  	background: transparent;
+}
+
+body > header nav li#selected a, body > header nav li:hover a, body > header nav li:active a {
+	position: relative;
+	z-index: 1;
+  	margin-top: -46px;
+  	background: transparent;
+}
+
+body > header nav li#selected img, body > header nav li:hover > img, body > header nav li:active > img {
+	visibility: visible;
+}
