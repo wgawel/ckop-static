@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>CKOP - Centrum Komputerowej Obsługi Podatkowej - Oferta usług</title>
+    <meta name="description" content="Usługi podatkowe i rachunkowe: cit, doradztwo podatkowe, rachunkowość, vat, zus. Wrocław<?php echo (isset($pageTitle) && ($pageTitle != '')) ? '. '.$pageTitle : ''; ?>" />
+	<link rel="stylesheet" type="text/css" href="css/general.css" />
+	<!--[if IE]><link rel="stylesheet" type="text/css" href="<?php echo url::base() ?>css/hacks/ie.css"><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php echo url::base() ?>css/hacks/ie7.css"><![endif]-->
+	<link rel="shortcut icon" href="media/images/const/icon.png" />
+	<!--[if IE]>
+		<script type="text/javascript" src="<?php echo url::base() ?>js/html5.js"></script>
+		<script type="text/javascript" src="<?php echo url::base() ?>js/DD_roundies_0.0.2a-min.js"></script>
+		<script>
+  			DD_roundies.addRule('nav', '6px');
+  			DD_roundies.addRule('p.validation_message', '6px');
+  			DD_roundies.addRule('#message', '6px');
+  			DD_roundies.addRule('fieldset.form', '6px');
+  		</script>
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/validate_localization/messages_pl.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1946006-3']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+</head>
+<body>
+<header>
+	<p id="logo-ckop"><a href="/">
+		<img src="media/images/const/header-logo-ckop.png" alt="CKOP Centrum Komputerowej Obsługi Podatkowej">
+	</a></p>
+
+	<p id="logo-site"><img src="media/images/const/header-logo-site.jpg" alt="Usługi podatkowe i rachunkowe na najwyższym poziomie">
+	</p>
+    <nav>
+        <ul>
+            <li><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="">Strona główna</a></li>
+            <li id="selected"><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="oferta_uslug.html">Oferta usług</a></li>
+            <li><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="o_firmie.html">O firmie</a></li>
+            <li><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+    <div id="mainContent">
+        <script>
+            $(document).ready(function (){
+
+                $('ol.drop-down_list > li > ul').slideUp('fast');
+
+                $('ol.drop-down_list > li > ul').parent('li').append('<a>Rozwiń</a>');
+
+                $('ol.drop-down_list > li > ul').parent('li').click(function(){
+                    if ($(this).children('a').text() == 'Rozwiń')
+                    {
+                        $(this).children('a').replaceWith('');			// hack for IE8
+                        $(this).children('ul').slideDown('fast');
+                        $(this).append('<a>Zwiń</a>');
+                    }
+                    else
+                    {
+                        $(this).children('a').replaceWith('');
+                        $(this).children('ul').slideUp('fast');
+                        $(this).append('<a>Rozwiń</a>');
+                    }
+                });
+
+            });
+        </script>
+
+        <article class="text">
+            <header>
+                <h1>Zakres usług księgowych świadczonych przez biuro rachunkowe CKOP</h1>
+            </header>
+            <ol class="drop-down_list">
+                <li>Zgłoszenie i rejestracja działalności gospodarczej</li>
+                <li>Ewidencja księgowa :
+                    <ul>
+                        <li>Księgi handlowe</li>
+                        <li>Podatkowa księga przychodów i rozchodów</li>
+                        <li>Ryczałt ewidencjonowany</li>
+                        <li>Karta podatkowa</li>
+                        <li>Rejestry zakupu i sprzedaży VAT</li>
+                        <li>Ewidencja środków trwałych</li>
+                        <li>Ewidencja wyposażenia</li>
+                    </ul>
+                </li>
+                <li>Deklaracje podatkowe</li>
+                <li>Sporządzanie sprawozdań :
+                    <ul>
+                        <li>Bilans</li>
+                        <li>Rachunek strat i zysków</li>
+                        <li>Przepływy pieniężne</li>
+                        <li>Informacje dodatkowe</li>
+                        <li>Sprawozdawczość do GUS</li>
+                        <li>Analizy i prognozy finansowe</li>
+                        <li>Do banku</li>
+                    </ul>
+                </li>
+                <li>Obsługiwanie form działalności gospodarczej  :
+                    <ul>
+                        <li>spółka akcyjna</li>
+                        <li>spółka z o.o.</li>
+                        <li>spółka komandytowo-akcyjna</li>
+                        <li>spółka jawna</li>
+                        <li>spółka komandytowa</li>
+                        <li>spółka partnerska</li>
+                        <li>spółka cywilna</li>
+                        <li>fundacje</li>
+                        <li>wspólnoty</li>
+                    </ul>
+                </li>
+                <li>Obsługa płacowa :
+                    <ul>
+                        <li>Dokumentacja i ewidencja płac
+                            <ul>
+                                <li>sporządzenie listy płac</li>
+                                <li>prowadzenie kart wynagrodzeń pracowników</li>
+                                <li>sporządzanie deklaracji podatkowych</li>
+                                <li>Fundusz socjalny</li>
+                            </ul>
+                        <li>Dokumentacja prac zleconych
+                            <ul>
+                                <li>prowadzenie ewidencji podatkowej pracownika</li>
+                                <li>przygotowywanie umów zleceń</li>
+                                <li>sporządzenie listy płac prac zleconych</li>
+                                <li>sporządzenie deklaracji podatkowych</li>
+                            </ul>
+                        </li>
+                        <li>Prowadzenie dokumentacji ZUS
+                            <ul>
+                                <li>sporządzanie deklaracji ZUS</li>
+                                <li>prowadzenie dokumentacji zasiłkowej</li>
+                                <li>przygotowywanie raportów RMUA za okresy miesięczne</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Obsługa kadrowa :
+                    <ul>
+                        <li>prowadzenie akt osobowych</li>
+                        <li>sporządzanie umowy o pracę</li>
+                        <li>sporządzenie świadectwa pracy</li>
+                        <li>prowadzenie ewidencji czasu pracy</li>
+                        <li>sporządzanie harmonogramów czasu pracy</li>
+                        <li>prowadzenie rejestru chorób zawodowych</li>
+                        <li>prowadzenie rejestru wypadków przy pracy</li>
+                    </ul>
+                </li>
+                <li>Prowadzenie dokumentacji spółek :
+                    <ul>
+                        <li>prowadzenie księgi udziałów</li>
+                        <li>prowadzenie księgi uchwał zarządu</li>
+                        <li>przygotowywanie tekstów uchwał zgromadzeń wspólników</li>
+                        <li>prowadzenie księgi protokołów zgromadzenia wspólników</li>
+                        <li>sporządzanie Sprawozdania Zarządu z działalności jednostki w roku obrotowym</li>
+                        <li>sporządzenie Sprawozdania Rady Nadzorczej z działalności jednostki w roku obrotowym</li>
+                        <li>sporządzanie Protokołu Nadzwyczajnego Zgromadzenia Wspólników</li>
+                        <li>aktualizacja tekstów umowy spółki</li>
+                        <li>organizowanie aktów notarialnych</li>
+                        <li>przygotowywanie materiałów na Zgromadzenie Wspólników</li>
+                        <li>rejestracja zmian organizacyjnych spółki w: Krajowym Rejestrze Sądowym, Urzędzie Skarbowym, Urzędzie Statystycznym.</li>
+                    </ul>
+                </li>
+                <li>Doradztwo podatkowe :
+                    <ul>
+                        <li>doradztwo przy zakładaniu i rejestracji podmiotu</li>
+                        <li>porady w zakresie obowiązków podatkowych</li>
+                        <li>konsultacje dotyczące zeznań i deklaracji podatkowych</li>
+                        <li>doradztwo finansowo-ekonomiczne</li>
+                        <li>interpretacje aktów prawnych w zakresie :
+                            <ul>
+                                <li>podatku dochodowego od osób prawnych</li>
+                                <li>podatku dochodowego od osób fizycznych</li>
+                                <li>podatku od towarów usług – VAT</li>
+                                <li>podatek od czynności cywilnoprawnych</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Okresowy przegląd ksiąg rachunkowych
+                    <ul>
+                        <li>właściwa analiza prawidłowości i rzetelności prowadzonych ksiąg rachunkowych</li>
+                        <li>sporządzenie raportu z analizy ksiąg rachunkowych i innych dokumentów wewnętrznych</li>
+                    </ul>
+                </li>
+                <li>Wyprowadzanie zaległości podatkowych i księgowych</li>
+            </ol>
+        </article>
+    </div>
+
+    <aside>
+        <section id="wizytowka_doradcy">
+            <h1>Doradca podatkowy</h1>
+            <h2>Sabina Gandecka</h2>
+            <img src="media/images/const/doradca-logo.gif" alt="Doradca podatkowy Sabina Gandecka">
+            <h3>nr wpisu 07010</h3>
+        </section>
+        <section id="kontakt">
+            <section id="dane_teleadresowe">
+                <header>
+                    <h1>Dane teleadresowe</h1>
+                </header>
+
+                <h2>CKOP</h2>
+
+                <h3>Centrum Komputerowej Obsługi Podatkowej</h3>
+                <h3>Kancelaria Księgowo-Podatkowa Contabilita</h3>
+
+                <p id="adres">Racławicka Center<br>
+                Budynek B3, pokój 320<br>
+                <br>
+                ul. Skarbowców 23A<br>
+                    53-025 Wrocław
+               </p>
+
+                <p>Telefon: <strong>602 183 192</strong></p>
+
+                <p>Nip: <strong>8990205520</strong></p>
+
+                <p>E-mail: <strong><a href="m&#x61;&#x69;&#108;&#116;&#111;&#x3A;
+                                            &#107;&#x6F;&#x6E;&#116;&#x61;&#107;&#116;&#64;&#99;&#107;&#x6F;p&#x2E;p&#108;">
+                    &#107;&#x6F;&#x6E;&#116;&#x61;&#107;&#116;&#64;&#99;&#107;&#x6F;p&#x2E;p&#108;
+                </a></strong></p>
+
+                <div id="dane_teleadresowe_bottom"></div>
+            </section>
+        </section>
+    </aside>
+
+</div>
+<footer>
+    <div id="footer_content">
+        <p>
+            <b>Wszelkie prawa zastrzeżone.</b> All rights reserved. Copyright's by <strong><a href="http://ckop.pl" title="CKOP - usługi podatkowe i rachunkowe">CKOP</a></strong>
+        </p>
+
+        <nav>
+            <a id="footer_nav_selected" href="">Strona główna</a>
+            <a href="panel_klienta.html">Panel klienta</a>
+            <a href="oferta_uslug.html">Oferta usług</a>
+            <a href="cennik.html">Cennik</a>
+            <a href="o_firmie.html">O firmie</a>
+            <a href="kontakt.html'">Kontakt</a>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>
