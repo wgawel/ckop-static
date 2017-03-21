@@ -4,8 +4,62 @@
     <meta charset="UTF-8">
     <title>CKOP - Centrum Komputerowej Obsługi Podatkowej</title>
     <meta name="description" content="Usługi podatkowe i rachunkowe: cit, doradztwo podatkowe, rachunkowość, vat, zus. Wrocław<?php echo (isset($pageTitle) && ($pageTitle != '')) ? '. '.$pageTitle : ''; ?>" />
+	<link rel="stylesheet" type="text/css" href="css/general.css" />
+	<!--[if IE]><link rel="stylesheet" type="text/css" href="<?php echo url::base() ?>css/hacks/ie.css"><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php echo url::base() ?>css/hacks/ie7.css"><![endif]-->
+	<link rel="shortcut icon" href="media/images/const/icon.png" />
+	<!--[if IE]>
+		<script type="text/javascript" src="<?php echo url::base() ?>js/html5.js"></script>
+		<script type="text/javascript" src="<?php echo url::base() ?>js/DD_roundies_0.0.2a-min.js"></script>
+		<script>
+  			DD_roundies.addRule('nav', '6px');
+  			DD_roundies.addRule('p.validation_message', '6px');
+  			DD_roundies.addRule('#message', '6px');
+  			DD_roundies.addRule('fieldset.form', '6px');
+  		</script>
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/validate_localization/messages_pl.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1946006-3']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
 </head>
 <body>
+<header>
+	<p id="logo-ckop"><a href="">
+		<img src="media/images/const/header-logo-ckop.png" alt="CKOP Centrum Komputerowej Obsługi Podatkowej">
+	</a></p>
+
+	<p id="logo-site"><img src="media/images/const/header-logo-site.jpg" alt="Usługi podatkowe i rachunkowe na najwyższym poziomie">
+	</p>
+    <nav>
+        <ul>
+            <li id="selected"><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="">Strona główna</a></li>
+            <li class="long_button"><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="panel_klienta.html">Panel klienta</a></li>
+            <li><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="oferta_uslug.html">Oferta usług</a></li>
+            <li><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="cennik.html">Cennik</a></li>
+            <li><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="o_firmie.html">O firmie</a></li>
+            <li><!--[if IE]><img src="media/images/const/menu-button-background.gif" alt=""><![endif]-->
+            <a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
 <div id="content">
     <div id="mainContent">
         <article class="text">
@@ -29,13 +83,12 @@
             </p>
         </article>
     </div>
-</div>
 
     <aside>
         <section id="wizytowka_doradcy">
             <h1>Doradca podatkowy</h1>
             <h2>Sabina Gandecka</h2>
-            <img src="<?php echo url::base(); ?>media/images/const/doradca-logo.gif" alt="Doradca podatkowy Sabina Gandecka">
+            <img src="media/images/const/doradca-logo.gif" alt="Doradca podatkowy Sabina Gandecka">
             <h3>nr wpisu 07010</h3>
         </section>
         <section id="kontakt">
@@ -67,5 +120,21 @@
     </aside>
 
 </div>
+<footer>
+    <div id="footer_content">
+        <p>
+            <b>Wszelkie prawa zastrzeżone.</b> All rights reserved. Copyright's by <strong><a href="http://ckop.pl" title="CKOP - usługi podatkowe i rachunkowe">CKOP</a></strong>
+        </p>
+
+        <nav>
+            <a id="footer_nav_selected" href="">Strona główna</a>
+            <a href="panel_klienta.html">Panel klienta</a>
+            <a href="oferta_uslug.html">Oferta usług</a>
+            <a href="cennik.html">Cennik</a>
+            <a href="o_firmie.html">O firmie</a>
+            <a href="kontakt.html'">Kontakt</a>
+        </nav>
+    </div>
+</footer>
 </body>
 </html>
